@@ -1,0 +1,30 @@
+{
+  "name": "@writetome51/array-move-by-index",
+  "version": "1.0.0",
+  "description": "Moves an item's position in an array",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/writetome51/array-move-by-index.git"
+  },
+  "keywords": [
+    "array",
+    "manipulation",
+    "move",
+    "position",
+    "index"
+  ],
+  "author": "Steve Thompson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/writetome51/array-move-by-index/issues"
+  },
+  "homepage": "https://github.com/writetome51/array-move-by-index#readme",
+  "dependencies": {
+    "@writetome51/array-get-and-remove-by-index": "~1.0.2",
+    "@writetome51/array-insert-at": "~2.0.0"
+  }
+}
