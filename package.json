@@ -23,8 +23,12 @@
     "url": "https://github.com/writetome51/array-move-by-index/issues"
   },
   "homepage": "https://github.com/writetome51/array-move-by-index#readme",
+  "devDependencies": {
+    "@writetome51/arrays-match": "~1.0.4"
+  },
   "dependencies": {
     "@writetome51/array-get-and-remove-by-index": "~1.0.2",
+    "@writetome51/array-remove-by-index": "~1.0.1",
     "@writetome51/array-insert-at": "~2.0.0"
   }
 }
