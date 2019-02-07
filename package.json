@@ -28,11 +28,8 @@
   },
   "dependencies": {
     "@writetome51/array-get-and-remove-by-index": "~1.0.2",
-    "@writetome51/array-get-by-index": "~1.0.1",
     "@writetome51/array-remove-by-index": "~1.0.1",
     "@writetome51/array-insert-at": "~2.0.0",
-    "@writetome51/array-replace-at": "~1.1.1",
-    "@writetome51/array-get-and-remove-head-tail": "~1.0.3",
     "@writetome51/array-and-index-validation": "~1.0.3"
   }
 }
