@@ -8,7 +8,7 @@ let copy = arr;
 
 // Test 1: Do a simple position switch in a 2 item array:
 moveByIndex(0, 1, arr);
-console.log(arr);
+
 if (arraysMatch(arr, [2, 1])) console.log('test 1 passed');
 else console.log('test 1 FAILED');
 
@@ -61,21 +61,26 @@ else console.log('test 7 FAILED');
 arr = [1, 2, 3, 4, 5];
 moveByIndex(0, -1, arr);
 
-if (arraysMatch(arr, [2, 3, 4, 5, 1])) console.log('test 7 passed');
-else console.log('test 7 FAILED');
+if (arraysMatch(arr, [2, 3, 4, 5, 1])) console.log('test 8 passed');
+else console.log('test 8 FAILED');
 
 
 // Test 9: make sure nothing goes wrong when newIndex argument is negative:
 arr = [1, 2, 3, 4, 5];
 moveByIndex(-1, -1, arr);
 
-if (arraysMatch(arr, [1, 2, 3, 4, 5])) console.log('test 8 passed');
-else console.log('test 8 FAILED');
+if (arraysMatch(arr, [1, 2, 3, 4, 5])) console.log('test 9 passed');
+else console.log('test 9 FAILED');
 
 
 // Test 10: make sure nothing goes wrong when newIndex argument is negative:
 arr = [1, 2, 3, 4, 5];
 moveByIndex(-1, -3, arr);
-console.log(arr);
-if (arraysMatch(arr, [1, 2, 5, 3, 4])) console.log('test 8 passed');
-else console.log('test 8 FAILED');
+
+if (arraysMatch(arr, [1, 2, 5, 3, 4])) console.log('test 10 passed');
+else console.log('test 10 FAILED');
+
+
+// should error:
+arr = [1,2];
+moveByIndex(0, 2, arr);
