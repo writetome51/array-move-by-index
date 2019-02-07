@@ -3,7 +3,7 @@ import { insertAt } from '@writetome51/array-insert-at';
 import { arraysMatch } from '@writetome51/arrays-match';
 
 
-let arr = [1, 2];
+let arr: any[] = [1, 2];
 let copy = arr;
 
 // Test 1: Do a simple position switch in a 2 item array:
@@ -11,6 +11,13 @@ moveByIndex(0, 1, arr);
 
 if (arraysMatch(arr, [2, 1])) console.log('test 1 passed');
 else console.log('test 1 FAILED');
+
+// Test 1A: Do the same as previous test, but with the indexes reversed:
+arr = [1, 2];
+moveByIndex(1, 0, arr);
+
+if (arraysMatch(arr, [2, 1])) console.log('test 1A passed');
+else console.log('test 1A FAILED');
 
 // Test 2: make sure the array's reference wasn't broken:
 if (arraysMatch(arr, copy)) console.log('test 2 passed');
@@ -26,10 +33,10 @@ else console.log('test 3 FAILED');
 
 
 // Test 4: make sure non-adjacent items are swapped properly:
-arr = [1, 2, 3, 4, 5];
+arr = ['a', 'b', 'c', 'd', 'e'];
 moveByIndex(1, 3, arr);
 
-if (arraysMatch(arr, [1, 3, 4, 2, 5])) console.log('test 4 passed');
+if (arraysMatch(arr, ['a', 'c', 'd', 'b', 'e'])) console.log('test 4 passed');
 else console.log('test 4 FAILED');
 
 
@@ -81,6 +88,55 @@ if (arraysMatch(arr, [1, 2, 5, 3, 4])) console.log('test 10 passed');
 else console.log('test 10 FAILED');
 
 
-// should error:
-arr = [1,2];
-moveByIndex(0, 2, arr);
+// Test 11: make sure nothing goes wrong when newIndex argument is negative:
+arr = [1, 2, 3, 4, 5];
+moveByIndex(-1, -2, arr);
+
+if (arraysMatch(arr, [1, 2, 3, 5, 4])) console.log('test 11 passed');
+else console.log('test 11 FAILED');
+
+
+// Test 12: make sure it works with nested arrays:
+arr = [[1, 2], [3, 4], [5, 6]];
+moveByIndex(-1, -2, arr);
+
+if (arraysMatch(arr, [[1, 2], [5, 6], [3, 4]])) console.log('test 12 passed');
+else console.log('test 12 FAILED');
+
+
+// Test 13: make sure function errors when invalid currentIndex is passed:
+let errorTriggered = false;
+arr = [1, 2];
+try{
+	moveByIndex(2, 0, arr);
+}
+catch (e) {
+	errorTriggered = true;
+}
+if (errorTriggered) console.log('test 13 passed');
+else console.log('test 13 FAILED');
+
+
+// Test 14: make sure function errors when invalid newIndex is passed:
+errorTriggered = false;
+arr = [1, 2];
+try{
+	moveByIndex(0, 2, arr);
+}
+catch (e) {
+	errorTriggered = true;
+}
+if (errorTriggered) console.log('test 14 passed');
+else console.log('test 14 FAILED');
+
+
+// Test 15: make sure function errors when something other than array is passed as third arg:
+errorTriggered = false;
+try{
+	moveByIndex(0, 0, 'hello');
+}
+catch (e) {
+	errorTriggered = true;
+}
+if (errorTriggered) console.log('test 15 passed');
+else console.log('test 15 FAILED');
