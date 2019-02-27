@@ -1,10 +1,7 @@
-# moveByIndex()
+# moveByIndex(currentIndex, newIndex, array): void
 
-## moveByIndex(currentIndex, newIndex, array): void
-
-Moves an item, identified by its <b>currentIndex</b>, to <b>newIndex</b>, in <b>array</b>.  
-<b>currentIndex</b> and <b>newIndex</b> can both be negative or positive.  
-Does not change array length.
+Moves an item, identified by its `currentIndex`, to `newIndex`, in `array`.  
+`currentIndex` and `newIndex` can both be negative or positive.  
 
 
 ## Examples
@@ -27,12 +24,7 @@ moveByIndex(-1, -2, arr);
 ```
 
 ## Installation
-
-You must have npm installed first.  Then, in the command line:
-
-```bash
-npm install @writetome51/array-move-by-index
-```
+`npm install @writetome51/array-move-by-index`
 
 ## Loading
 ```
