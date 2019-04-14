@@ -1,4 +1,4 @@
-# moveByIndex(currentIndex, newIndex, array): void
+# moveByIndex(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currentIndex,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newIndex,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<br>): void
 
 Moves an item, identified by its `currentIndex`, to `newIndex`, in `array`.  
 `currentIndex` and `newIndex` can both be negative or positive.  

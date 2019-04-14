@@ -1,14 +1,13 @@
 import { getAndRemoveByIndex } from '@writetome51/array-get-and-remove-by-index';
 import { insertAt } from '@writetome51/array-insert-at';
-import { errorIfIndexNotValid }
-	from '@writetome51/array-and-index-validation/errorIf/errorIfIndexNotValid';
+import { errorIfIndexNotValid } from 'error-if-index-not-valid';
 
 
 // Moves an item's position in array.
 // currentIndex and newIndex can both be negative or positive.
 
 export function moveByIndex(currentIndex, newIndex, array): void {
-	errorIfIndexNotValid(newIndex, array);
+	errorIfIndexNotValid(newIndex, array.length);
 
 	// We need to guarantee newIndex is positive to simplify algorithm.
 	if (newIndex < 0) newIndex = (array.length + newIndex);

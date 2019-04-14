@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/array-move-by-index",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Moves an item's position in an array",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,6 +15,7 @@
     "array",
     "manipulation",
     "move",
+    "element",
     "position",
     "index"
   ],
@@ -25,11 +26,11 @@
   },
   "homepage": "https://github.com/writetome51/array-move-by-index#readme",
   "devDependencies": {
-    "@writetome51/arrays-match": "~1.0.5"
+    "@writetome51/arrays-match": "~1.0.6"
   },
   "dependencies": {
     "@writetome51/array-get-and-remove-by-index": "~1.0.3",
-    "@writetome51/array-insert-at": "~2.0.2",
-    "@writetome51/array-and-index-validation": "~1.0.6"
+    "@writetome51/array-insert-at": "~2.0.3",
+    "error-if-index-not-valid": "~1.0.0"
   }
 }
