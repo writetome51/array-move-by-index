@@ -1,11 +1,11 @@
 # moveByIndex(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currentIndex,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newIndex,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<br>): void
 
-Moves an item, identified by its `currentIndex`, to `newIndex`, in `array`.  
+Moves an item from its `currentIndex` to `newIndex`, in `array`.  
 `currentIndex` and `newIndex` can both be negative or positive.  
 
 
 ## Examples
-```
+```js
 let arr = [10, 20];
 moveByIndex(0, 1, arr);
 // arr is now [20, 10]
@@ -24,12 +24,9 @@ moveByIndex(-1, -2, arr);
 ```
 
 ## Installation
-`npm install @writetome51/array-move-by-index`
+`npm i  @writetome51/array-move-by-index`
 
 ## Loading
-```
-// If using TypeScript:
+```js
 import { moveByIndex } from '@writetome51/array-move-by-index';
-// If using ES5 JavaScript:
-var moveByIndex = require('@writetome51/array-move-by-index').moveByIndex;
 ```
