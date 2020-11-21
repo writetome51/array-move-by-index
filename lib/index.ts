@@ -1,3 +1,4 @@
+import { append } from '@writetome51/array-append-prepend';
 import { errorIfIndexNotValid } from 'error-if-index-not-valid';
 import { getAndRemoveByIndex } from '@writetome51/array-get-and-remove-by-index';
 import { insertAt } from '@writetome51/array-insert-at';
@@ -7,16 +8,19 @@ import { insertAt } from '@writetome51/array-insert-at';
 // `currentIndex` and `newIndex` can both be negative or positive.
 
 export function moveByIndex(currentIndex, newIndex, array): void {
-	errorIfIndexNotValid(newIndex, array.length); // validates newIndex and array.
+	let arrLength = array.length;
+	errorIfIndexNotValid(newIndex, arrLength); // validates `newIndex` and `array`.
 
-	// Make sure newIndex is positive to simplify algorithm.
-	// This must be done before array's length changes.
-	if (newIndex < 0) newIndex = (array.length + newIndex);
+	if (newIndex < 0) newIndex = (arrLength + newIndex);
 
-	// getAndRemoveByIndex() validates currentIndex.
-	let itemBeingMoved = getAndRemoveByIndex(currentIndex, array);
+	let itemBeingMoved = getAndRemoveByIndex(currentIndex, array); // validates `currentIndex`.
 
-	if (newIndex === array.length) array.push(itemBeingMoved);
+	if (isLastIndex(newIndex)) append(itemBeingMoved, array);
 
 	else insertAt(newIndex, [itemBeingMoved], array);
+
+
+	function isLastIndex(i): boolean {
+		return i === (arrLength - 1);
+	}
 }
